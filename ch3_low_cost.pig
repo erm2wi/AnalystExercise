@@ -1,4 +1,4 @@
-data = load '/home/ec2-user/ad_data[1-2].txt' using PigStorage(',') as (campaign_id:chararray,
+data = load '/home/ec2-user/ad_data[1-2].txt' as (campaign_id:chararray,
              date:chararray, time:chararray,
              keyword:chararray, display_site:chararray, 
              placement:chararray, was_clicked:int, cpc:int);
