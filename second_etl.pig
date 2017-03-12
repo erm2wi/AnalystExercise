@@ -6,4 +6,4 @@ reordereddata = FOREACH distincteddata GENERATE campaign_id, REPLACE(date,'-','/
 describe reordereddata; 
 first_five = limit reordereddata 10;
 dump first_five; 
---store reordereddata into '~/reorder_ad_data1.txt';
+STORE reordereddata INTO '/home/ec2-user/ad_data1/';
