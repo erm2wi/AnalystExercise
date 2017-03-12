@@ -4,4 +4,6 @@ describe data;
 distincteddata = DISTINCT data;
 reordereddata = FOREACH distincteddata GENERATE campaign_id, REPLACE(date,'-','/'),time,UPPER(TRIM(keyword)),display_site,placement,was_clicked,cpc;
 describe reordereddata; 
-store reordereddata into '~/reorder_ad_data1.txt';
+first5 = limit reorderreddata 5;
+dump first5; 
+--store reordereddata into '~/reorder_ad_data1.txt';
