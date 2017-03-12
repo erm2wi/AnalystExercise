@@ -2,6 +2,6 @@ data = load 'ad_sample.txt'  using PigStorage(',') as (campaign_id:chararray,dat
 describe data;
 dump data;
 distincteddata = DISTINCT data;
-reordereddata = FOREACH distincteddata GENERATE keyword,campaign_id, date,time,display_site,placement,was_clicked,cpc;
+reordereddata = FOREACH distincteddata GENERATE campaign_id, REPLACE(date,'-','/'),time,UPPER(TRIM(keyword)),display_site,placement,was_clicked,cpc;
 describe reordereddata; 
 dump reordereddata;
