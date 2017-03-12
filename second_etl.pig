@@ -2,5 +2,5 @@ data = load 'ad_sample.txt'  as (campaign_id,date,time,display_site,placement,wa
 describe data;
 dump data;
 distincteddata = DISTINCT data;
-reordereddata = FOREACH distincteddata Generate campaign_id, date,time,UPPER(TRIM(keyword),display_site,placement,was_clicked,cpc;
+reordereddata = FOREACH distincteddata Generate campaign_id, date,time,UPPER(TRIM(keyword)),display_site,placement,was_clicked,cpc;
 dump reordereddata;
