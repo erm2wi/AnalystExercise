@@ -1,4 +1,4 @@
-data = load '~/ad_sample.txt'  using PigStorage(',') as (campaign_id:chararray,date:chararray,time:chararray,display_site:chararray,placement:chararray,was_clicked:int,cpc:int,keyword:chararray);
+data = load '/home/ec2-user/ad_sample.txt'  using PigStorage(',') as (campaign_id:chararray,date:chararray,time:chararray,display_site:chararray,placement:chararray,was_clicked:int,cpc:int,keyword:chararray);
 describe data;
 dump data;
 distincteddata = DISTINCT data;
