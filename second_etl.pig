@@ -1,4 +1,4 @@
-data = load 'ad_sample.txt'  as (campaign_id,date,time,display_site,placement,was_clicked:int,cpc:int,keyword);
+data = load 'ad_sample.txt'  as (campaign_id:chararray,date:chararray,time:chararray,display_site:chararray,placement:chararray,was_clicked:int,cpc:int,keyword:chararray);
 describe data;
 dump data;
 distincteddata = DISTINCT data;
