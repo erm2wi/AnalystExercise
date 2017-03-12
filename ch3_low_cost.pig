@@ -10,3 +10,4 @@ dump clicked_data_5;
 grouped_data = GROUP clicked_data BY display_site;
 DESCRIBE grouped_data;
 cost_by_site = FOREACH grouped_data GENERATE group, SUM(clicked_data.cpc);
+dump cost_by_site;
