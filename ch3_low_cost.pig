@@ -7,3 +7,5 @@ dump data_5;
 clicked_data = FILTER data by was_clicked==1;
 clicked_data_5 = LIMIT clicked_data 5;
 dump clicked_data_5;
+grouped_data = GROUP clicked_data BY display_site;
+DESCRIBE grouped_data;
